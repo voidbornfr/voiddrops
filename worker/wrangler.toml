@@ -1,0 +1,21 @@
+# Wrangler configuration for VoidDrop URL Shortener
+name = "voiddrop-shortener"
+main = "index.js"
+compatibility_date = "2024-03-01"
+
+[vars]
+# Default local dev frontend url
+FRONTEND_URL = "http://localhost:5173"
+
+# Appwrite Configurations
+APPWRITE_ENDPOINT = "https://sgp.cloud.appwrite.io/v1"
+APPWRITE_PROJECT_ID = "6a56081e001bbf42047a"
+APPWRITE_BUCKET_ID = "6a56095b001fbd0d2e50"
+APPWRITE_DATABASE_ID = "6a561159001917200fbf"
+APPWRITE_COLLECTION_ID = "drops"
+
+# Instructions:
+# 1. Install wrangler CLI globally or run it via npx: npm install -g wrangler
+# 2. Run 'wrangler login' to link your Cloudflare account
+# 3. Modify the placeholders in wrangler.toml with your Project and Bucket ID
+# 4. Deploy using: wrangler deploy
