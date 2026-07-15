@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/:user/:file",
+      "destination": "workerurl/:user/:file"
+    },
+    {
+      "source": "/:user/:file/:password",
+      "destination": "workerurl/:user/:file/:password"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
