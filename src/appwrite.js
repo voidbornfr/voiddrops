@@ -18,25 +18,6 @@ class AppwriteService {
   }
 
   loadConfig() {
-    const saved = localStorage.getItem('voiddrop_appwrite_config_v2');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        this.configure(
-          parsed.endpoint || 'https://cloud.appwrite.io/v1',
-          parsed.projectId || '',
-          parsed.bucketId || '',
-          parsed.databaseId || '',
-          parsed.collectionId || '',
-          parsed.workerUrl || ''
-        );
-        return;
-      } catch (e) {
-        console.error("Error parsing saved configuration", e);
-      }
-    }
-
-    // Fallback to import.meta.env
     this.configure(
       import.meta.env.VITE_APPWRITE_ENDPOINT || 'https://cloud.appwrite.io/v1',
       import.meta.env.VITE_APPWRITE_PROJECT_ID || '',
